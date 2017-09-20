@@ -6,11 +6,11 @@
   <joint name="${name}_base_joint" type="fixed">
     <insert_block name="origin"/>
     <parent link="${parent}"/>
-    <child link="${name}_hand_link"/>
+    <child link="${name}_base_link"/>
   </joint>
 
   <link
-    name="${name}_hand_link">
+    name="${name}_base_link">
     <inertial>
       <origin
         xyz="-6.56023314178677E-06 -0.00175309107853196 0.0266239521718502"
@@ -50,7 +50,7 @@
     </collision>
   </link>
   <link
-    name="${name}_left_finger_link">
+    name="${name}_base_link_gripper_left">
     <inertial>
       <origin
         xyz="-2.850603053553E-05 -0.00191114285188175 0.00382933445364996"
@@ -90,13 +90,13 @@
     </collision>
   </link>
   <joint
-    name="${name}_left_finger_joint"
+    name="${name}_base_joint_gripper_left"
     type="prismatic">
     <origin
       xyz="-0.0003903 -0.0358 0.069014"
       rpy="3.1416 -1.5708 0" />
-    <parent link="${name}_hand_link" />
-    <child link="${name}_left_finger_link" />
+    <parent link="${name}_base_link" />
+    <child link="${name}_base_link_gripper_left" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -106,7 +106,7 @@
       velocity="0" />
   </joint>
   <link
-    name="${name}_right_finger_link">
+    name="${name}_base_link_gripper_right">
     <inertial>
       <origin
         xyz="-2.72000777333109E-05 -0.00460993992652343 -0.00191114282807962"
@@ -146,13 +146,13 @@
     </collision>
   </link>
   <joint
-    name="${name}_right_finger_joint"
+    name="${name}_base_joint_gripper_right"
     type="prismatic">
     <origin
       xyz="-0.0003903 0.0358 0.069012"
       rpy="1.5708 -1.5708 0" />
-    <parent link="${name}_hand_link" />
-    <child link="${name}_right_finger_link" />
+    <parent link="${name}_base_link" />
+    <child link="${name}_base_link_gripper_right" />
     <axis
       xyz="0 0 -1" />
     <limit
@@ -211,7 +211,7 @@
     <origin
       xyz="0.00755 0.0 0.0049"
       rpy="0 1.57079 -1.57079" />
-    <parent link="${name}_right_finger_link" />
+    <parent link="${name}_base_link_gripper_right" />
     <child link="${name}_right_universal_finger_link" />
   </joint>
 
@@ -261,7 +261,7 @@
     <origin
       xyz="0.00755 -0.0045 0"
       rpy="0 3.14159 -1.57079" />
-    <parent link="${name}_left_finger_link" />
+    <parent link="${name}_base_link_gripper_left" />
     <child link="${name}_left_universal_finger_link" />
   </joint>
 
