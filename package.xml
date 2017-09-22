@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <name>wsg_32_description</name>
+  <version>0.0.3</version>
+  <description>The wsg_32_description package</description>
+  <maintainer email="maxsvetlik@utexas.edu">Max Svetlik</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>gazebo</run_depend>
+
+  <export>
+  </export>
+</package>

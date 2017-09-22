@@ -1,6 +1,0 @@
-<package>
-  <description brief="wsg_32_description">wsg_32_description</description>
-  <depend package="gazebo" />
-  <author>maxsvetlik@utexas.edu</author>
-  <license>BSD</license>
-</package>
