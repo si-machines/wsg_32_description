@@ -85,14 +85,14 @@
     name="wsg_50_gripper_base_joint_gripper_left"
     type="prismatic">
     <origin
-      xyz="-0.0003903 -0.0358 0.069014"
+      xyz="-0.0003903 -0.0078 0.069014"
       rpy="3.1416 -1.5708 0" />
     <parent
       link="hand_link" />
     <child
       link="wsg_50_gripper_base_link_gripper_left" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       lower="-0.028"
       upper="0"
@@ -104,7 +104,7 @@
     <inertial>
       <origin
         xyz="-2.72000777333109E-05 -0.00460993992652343 -0.00191114282807962"
-        rpy="0 0 0" />
+        rpy="-1.57079 3.14159 -1.57079" />
       <mass
         value="3.41920163633724E-06" />
       <inertia
@@ -118,7 +118,7 @@
     <visual>
       <origin
         xyz="-0.00725 0 0.0004"
-        rpy="-1.57079 0  -1.57079" />
+        rpy="-1.57079 3.14159  -1.57079" />
       <geometry>
         <mesh
           filename="package://wsg_32_description/meshes/right_finger_link.STL" />
@@ -143,17 +143,17 @@
     name="wsg_50_gripper_base_joint_gripper_right"
     type="prismatic">
     <origin
-      xyz="-0.0003903 0.0358 0.069012"
-      rpy="1.5708 -1.5708 0" />
+      xyz="-0.0003903 0.0078 0.069012"
+      rpy="-1.5708 -1.5708 0" />
     <parent
       link="hand_link" />
     <child
       link="wsg_50_gripper_base_link_gripper_right" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-0.028"
-      upper="0"
+      lower="0"
+      upper="0.028"
       effort="0"
       velocity="0" />
   </joint>
@@ -179,7 +179,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.00 0 0.00"
+        xyz="-0.01 0 0.00"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -206,7 +206,7 @@
     type="fixed">
     <origin
       xyz="0.00755 0.0 0.0049"
-      rpy="0 1.57079 -1.57079" />
+      rpy="0 -1.57079 -1.57079" />
     <parent
       link="wsg_50_gripper_base_link_gripper_right" />
     <child
